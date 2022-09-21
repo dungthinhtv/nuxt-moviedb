@@ -14,7 +14,7 @@
           class="mx-4"
           dark
           icon
-          :to="icon.link"
+          :href="icon.link"
         >
           <v-icon size="24px">
             {{ icon.ic }}
