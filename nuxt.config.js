@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors';
 
+const token =
+  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjgyZDMzZmYzNGEyNjU5MGMyOWFhZWYzZDA5ZjI3YyIsInN1YiI6IjYzMjljZjA4YzUxYWNkMDA3YTg2ZWJmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2sAQNSLqAnmY6tR8jFPhxYf7OK52ddljA2aifkLWdRI';
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -36,7 +39,17 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/axios'],
+
+  axios: {
+    // proxy: true
+    baseURL: 'https://api.themoviedb.org/3/',
+    headers: {
+      common: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

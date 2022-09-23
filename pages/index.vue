@@ -1,14 +1,14 @@
 <template>
   <v-container>
     <SectionTitle title="Popular Movies" link="/movies" />
-    <v-row v-if="movies.length">
+    <v-row v-if="movies">
       <v-col cols="12" sm="4" v-for="movie in movies" :key="movie.id">
         <MovieCard :movie="movie" />
       </v-col>
     </v-row>
     <v-spacer class="mt-10"></v-spacer>
     <SectionTitle title="Upcoming Movies" link="/movies" />
-    <v-row v-if="upcoming.length">
+    <v-row v-if="upcoming">
       <v-col cols="12" sm="4" v-for="movie in upcoming" :key="movie.id">
         <MovieCard :movie="movie" />
       </v-col>
