@@ -1,16 +1,5 @@
 <template>
   <v-container>
-    <div class="text-center my-4">
-      <v-btn value="popular" class="mr-2" @click="handleGetBy(`popular`)"
-        >Popular</v-btn
-      >
-      <v-btn value="on_the_air" class="mr-2" @click="handleGetBy(`on_the_air`)"
-        >On TV</v-btn
-      >
-      <v-btn value="top_rated" class="mr-2" @click="handleGetBy(`top_rated`)"
-        >Top Rated</v-btn
-      >
-    </div>
     <v-row v-if="$fetchState.pending">
       <v-col cols="12" sm="3" v-for="s in 20" :key="s">
         <v-skeleton-loader type="image, list-item-two-line"></v-skeleton-loader>
@@ -19,7 +8,7 @@
     <v-row v-else-if="$fetchState.error">
       <h2 class="error">An error occurred!</h2>
     </v-row>
-    <SectionTVs v-else :movies="movies" />
+    <SectionPersons v-else :persons="persons" />
     <v-row>
       <v-col cols="12">
         <div class="text-center">
@@ -37,10 +26,11 @@
 
 <script>
 import SectionTVs from '../components/SectionTVs.vue';
+import SectionPersons from '../components/SectionPersons.vue';
 export default {
   data() {
     return {
-      movies: [],
+      persons: [],
       getBy: 'popular',
       totalResults: 1,
       totalPages: 1,
@@ -52,9 +42,9 @@ export default {
   },
   async fetch() {
     await this.$axios
-      .$get(`/tv/${this.getBy}?page=${this.currentPage}`)
+      .$get(`/person/${this.getBy}?page=${this.currentPage}`)
       .then((res) => {
-        this.movies = res.results;
+        this.persons = res.results;
         this.totalPages = 500;
         this.totalResults = res.total_results;
         this.$router.push({ query: { page: this.currentPage } });
@@ -70,7 +60,7 @@ export default {
       this.$fetch();
     },
   },
-  components: { SectionTVs },
+  components: { SectionTVs, SectionPersons },
 };
 </script>
 

@@ -1,11 +1,11 @@
 <template>
-  <v-card :to="`/movie/${movie.id}`" nuxt>
+  <v-card :to="`/tv/${movie.id}`" nuxt>
     <v-img
       height="300"
       :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
     ></v-img>
     <v-card-title>
-      {{ movie.title }}&nbsp;
+      {{ movie.name }}&nbsp;
       <span class="grey--text subtitle">
         ({{
           movie.release_date
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     genreTypeName(genId) {
-      for (const item of this.$store.state.genres) {
+      for (const item of this.$store.state.tv_genres) {
         if (item.id == genId) return item.name;
       }
     },
