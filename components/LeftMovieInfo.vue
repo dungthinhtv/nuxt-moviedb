@@ -25,8 +25,8 @@
             <v-spacer></v-spacer>
           </v-toolbar>
           <v-list three-line subheader>
-            <v-list-item>
-              <v-list-item-content>
+            <v-list-item class="pa-0">
+              <v-list-item-content class="pa-0">
                 <div class="iframe-container">
                   <iframe
                     allowfullscreen
@@ -73,7 +73,7 @@
             <v-spacer></v-spacer>
           </v-toolbar>
           <v-list three-line subheader>
-            <v-list-item>
+            <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
                 <div class="iframe-container">
                   <iframe
