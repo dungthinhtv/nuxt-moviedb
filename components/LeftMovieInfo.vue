@@ -2,6 +2,7 @@
   <v-banner sticky shaped tile
     ><v-img :src="`https://www.themoviedb.org/t/p/w500/${data.poster_path}`" />
     <v-card-text class="mt-4">
+      <!-- TRAILER  -->
       <v-dialog v-model="dialog" persistent max-width="800">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -17,7 +18,6 @@
             trailer</v-btn
           ></template
         ><v-card>
-          
           <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
@@ -30,18 +30,27 @@
                 </div>
               </v-list-item-content>
             </v-list-item>
-          </v-list> 
+          </v-list>
           <v-list>
-          <v-list-item>
-          <v-list-item-content>
-          
-          <div class="text-center" >
-      <v-btn class="mx-2" fab dark small color="pink" @click="closeModal">
-        <v-icon dark>
-          mdi-close
-        </v-icon>
-      </v-btn></div></v-list-item-content></v-list-item></v-list></v-card
-      ></v-dialog>
+            <v-list-item>
+              <v-list-item-content>
+                <div class="text-center">
+                  <v-btn
+                    class="mx-2"
+                    fab
+                    dark
+                    small
+                    color="pink"
+                    @click="closeModal"
+                  >
+                    <v-icon dark> mdi-close </v-icon>
+                  </v-btn>
+                </div></v-list-item-content
+              ></v-list-item
+            ></v-list
+          ></v-card
+        ></v-dialog
+      >
 
       <!-- HOMEPAGE BUTTON  -->
       <v-btn
@@ -70,6 +79,7 @@
             <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch</v-btn
           ></template
         >
+        <v-card flat color="red">
           <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
@@ -84,16 +94,25 @@
             </v-list-item>
           </v-list>
           <v-list>
-          <v-list-item>
-          <v-list-item-content>
-          
-          <div class="text-center" >
-      <v-btn class="mx-2" fab dark small color="pink" @click="closeModal">
-        <v-icon dark>
-          mdi-close
-        </v-icon>
-      </v-btn></div></v-list-item-content></v-list-item></v-list></v-card></v-dialog
-      >
+            <v-list-item flat color="rgb(255, 0, 0, 0.2)">
+              <v-list-item-content>
+                <div class="text-center">
+                  <v-btn
+                    class="mx-2"
+                    fab
+                    dark
+                    small
+                    color="pink"
+                    @click="closeModal"
+                  >
+                    <v-icon dark>mdi-close</v-icon>
+                  </v-btn>
+                </div></v-list-item-content
+              ></v-list-item
+            ></v-list
+          >
+        </v-card>
+      </v-dialog>
     </v-card-text></v-banner
   >
 </template>
