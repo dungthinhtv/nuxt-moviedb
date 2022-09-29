@@ -34,8 +34,7 @@
               </v-list-item-content>
             </v-list-item>
           </v-list>
-          </v-card
-        ></v-dialog
+        </v-card></v-dialog
       >
 
       <!-- HOMEPAGE BUTTON  -->
