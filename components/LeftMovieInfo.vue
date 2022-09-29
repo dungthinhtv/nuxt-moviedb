@@ -17,13 +17,7 @@
             trailer</v-btn
           ></template
         ><v-card>
-          <v-toolbar dark color="primary">
-            <v-btn icon dark @click="closeModal">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-toolbar-title>{{ data.title }}</v-toolbar-title>
-            <v-spacer></v-spacer>
-          </v-toolbar>
+          
           <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
@@ -36,7 +30,17 @@
                 </div>
               </v-list-item-content>
             </v-list-item>
-          </v-list> </v-card
+          </v-list> 
+          <v-list>
+          <v-list-item>
+          <v-list-item-content>
+          
+          <div class="text-center" >
+      <v-btn class="mx-2" fab dark small color="pink" @click="closeModal">
+        <v-icon dark>
+          mdi-close
+        </v-icon>
+      </v-btn></div></v-list-item-content></v-list-item></v-list></v-card
       ></v-dialog>
 
       <!-- HOMEPAGE BUTTON  -->
@@ -65,13 +69,7 @@
           >
             <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch</v-btn
           ></template
-        ><v-toolbar dark color="primary">
-            <v-btn icon dark @click="closeModal">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-toolbar-title>{{ data.title }}</v-toolbar-title>
-            <v-spacer></v-spacer>
-          </v-toolbar>
+        >
           <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
@@ -84,7 +82,17 @@
                 </div>
               </v-list-item-content>
             </v-list-item>
-          </v-list> </v-card></v-dialog
+          </v-list>
+          <v-list>
+          <v-list-item>
+          <v-list-item-content>
+          
+          <div class="text-center" >
+      <v-btn class="mx-2" fab dark small color="pink" @click="closeModal">
+        <v-icon dark>
+          mdi-close
+        </v-icon>
+      </v-btn></div></v-list-item-content></v-list-item></v-list></v-card></v-dialog
       >
     </v-card-text></v-banner
   >
