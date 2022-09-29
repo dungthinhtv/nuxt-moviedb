@@ -28,27 +28,13 @@
                     v-if="isVideo"
                   ></iframe>
                 </div>
+                <v-btn @click="closeModal">
+                  <v-icon dark>mdi-close</v-icon>
+                </v-btn>
               </v-list-item-content>
             </v-list-item>
           </v-list>
-          <v-list>
-            <v-list-item>
-              <v-list-item-content>
-                <div class="text-center">
-                  <v-btn
-                    class="mx-2"
-                    fab
-                    dark
-                    small
-                    color="pink"
-                    @click="closeModal"
-                  >
-                    <v-icon dark> mdi-close </v-icon>
-                  </v-btn>
-                </div></v-list-item-content
-              ></v-list-item
-            ></v-list
-          ></v-card
+          </v-card
         ></v-dialog
       >
 
@@ -79,7 +65,7 @@
             <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch</v-btn
           ></template
         >
-        <v-card flat color="red">
+        <v-card>
           <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
@@ -90,27 +76,12 @@
                     v-if="isPlay"
                   ></iframe>
                 </div>
+                <v-btn @click="closeModal">
+                  <v-icon dark>mdi-close</v-icon>
+                </v-btn>
               </v-list-item-content>
             </v-list-item>
           </v-list>
-          <v-list>
-            <v-list-item flat color="rgb(255, 0, 0, 0.2)">
-              <v-list-item-content>
-                <div class="text-center">
-                  <v-btn
-                    class="mx-2"
-                    fab
-                    dark
-                    small
-                    color="pink"
-                    @click="closeModal"
-                  >
-                    <v-icon dark>mdi-close</v-icon>
-                  </v-btn>
-                </div></v-list-item-content
-              ></v-list-item
-            ></v-list
-          >
         </v-card>
       </v-dialog>
     </v-card-text></v-banner
