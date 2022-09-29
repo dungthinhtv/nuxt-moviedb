@@ -74,7 +74,7 @@
           </v-toolbar>
           <v-list three-line subheader>
             <v-list-item>
-              <v-list-item-content>
+              <v-list-item-content class="pa-0">
                 <div class="iframe-container">
                   <iframe
                     allowfullscreen
