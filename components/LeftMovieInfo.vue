@@ -17,26 +17,27 @@
             trailer</v-btn
           ></template
         ><v-card>
-          <v-card-title
-            ><span class="headline"> {{ data.title }} </span></v-card-title
-          >
-          <v-card-text>
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <div class="iframe-container">
-                    <iframe
-                      allowfullscreen
-                      :src="mediaUrl"
-                      v-if="isVideo"
-                    ></iframe></div></v-col></v-row></v-container
-          ></v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn color="error" text @click="closeModal">Close</v-btn>
-          </v-card-actions></v-card
-        ></v-dialog
-      >
+          <v-toolbar dark color="primary">
+            <v-btn icon dark @click="closeModal">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <v-toolbar-title>{{ data.title }}</v-toolbar-title>
+            <v-spacer></v-spacer>
+          </v-toolbar>
+          <v-list three-line subheader>
+            <v-list-item>
+              <v-list-item-content>
+                <div class="iframe-container">
+                  <iframe
+                    allowfullscreen
+                    :src="mediaUrl"
+                    v-if="isVideo"
+                  ></iframe>
+                </div>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list> </v-card
+      ></v-dialog>
 
       <!-- HOMEPAGE BUTTON  -->
       <v-btn
@@ -64,26 +65,26 @@
           >
             <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch</v-btn
           ></template
-        ><v-card>
-          <v-card-title
-            ><span class="headline"> {{ data.title }} </span></v-card-title
-          >
-          <v-card-text>
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <div class="iframe-container">
-                    <iframe
-                      allowfullscreen
-                      :src="hasVideo"
-                      v-if="isPlay"
-                    ></iframe></div></v-col></v-row></v-container
-          ></v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn color="error" text @click="closeModal">Close</v-btn>
-          </v-card-actions></v-card
-        ></v-dialog
+        ><v-toolbar dark color="primary">
+            <v-btn icon dark @click="closeModal">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <v-toolbar-title>{{ data.title }}</v-toolbar-title>
+            <v-spacer></v-spacer>
+          </v-toolbar>
+          <v-list three-line subheader>
+            <v-list-item>
+              <v-list-item-content>
+                <div class="iframe-container">
+                  <iframe
+                    allowfullscreen
+                    :src="hasVideo"
+                    v-if="isPlay"
+                  ></iframe>
+                </div>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list> </v-card></v-dialog
       >
     </v-card-text></v-banner
   >
