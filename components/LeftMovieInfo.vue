@@ -24,7 +24,7 @@
             <v-toolbar-title>{{ data.title }}</v-toolbar-title>
             <v-spacer></v-spacer>
           </v-toolbar>
-          <v-list three-line subheader>
+          <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
                 <div class="iframe-container">
@@ -72,7 +72,7 @@
             <v-toolbar-title>{{ data.title }}</v-toolbar-title>
             <v-spacer></v-spacer>
           </v-toolbar>
-          <v-list three-line subheader>
+          <v-list class="pa-0">
             <v-list-item class="pa-0">
               <v-list-item-content class="pa-0">
                 <div class="iframe-container">
