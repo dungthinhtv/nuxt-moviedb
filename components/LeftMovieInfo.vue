@@ -14,8 +14,7 @@
             v-on="on"
             @click="openYoutubeModal"
           >
-            <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch
-            trailer</v-btn
+            <v-icon>mdi-arrow-right-drop-circle-outline</v-icon>Trailer</v-btn
           ></template
         ><v-card>
           <v-list class="pa-0">
