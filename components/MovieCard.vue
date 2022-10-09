@@ -75,3 +75,19 @@ export default {
   },
 };
 </script>
+
+<style>
+.p {
+  height: 300px;
+  overflow: hidden;
+}
+
+.p-img {
+  width: 100%;
+  transition: all 10s ease;
+}
+
+.p:hover .p-img {
+  transform: translateY(-100%);
+}
+</style>
