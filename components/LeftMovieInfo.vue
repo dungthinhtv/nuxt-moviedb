@@ -87,7 +87,7 @@
 </template>
 
 <script>
-import streamData from '../streamsb.json';
+import streamData from '../stream.json';
 export default {
   props: {
     data: {
