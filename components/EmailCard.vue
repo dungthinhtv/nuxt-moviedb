@@ -16,7 +16,7 @@
         required
       ></v-text-field>
       <v-textarea v-model="message" name="message" label="Message"></v-textarea>
-      <v-btn type="submit">Send</v-btn>
+      <v-btn type="submit" class="float-right">Send</v-btn>
     </form>
   </v-container>
 </template>
@@ -47,6 +47,8 @@ export default {
             this.user_name = '';
             this.user_email = '';
             this.message = '';
+            alert('SUCCESS!');
+            this.$router.push('/');
           },
           (error) => {
             console.log('FAILED...', error.text);

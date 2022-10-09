@@ -56,6 +56,7 @@ export default {
       { title: 'Movies', link: '/movies' },
       { title: 'TV Series', link: '/tv-series' },
       { title: 'Actors', link: '/persons' },
+      { title: 'Contact', link: '/contact' },
     ],
   }),
 };
