@@ -4,6 +4,7 @@
     <v-main>
       <Nuxt />
     </v-main>
+
     <Footer />
     <v-overlay :value="overlay" dark opacity="0.9">
       <Search />
@@ -15,6 +16,7 @@
 <script>
 import Footer from '../components/Footer.vue';
 import Search from '../components/Search.vue';
+
 export default {
   components: { Footer, Search },
 
