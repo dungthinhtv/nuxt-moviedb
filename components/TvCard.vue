@@ -1,9 +1,16 @@
 <template>
   <v-card :to="`/tv/${movie.id}`" nuxt>
-    <v-img
+    <div class="p">
+      <img
+        :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
+        alt=""
+        class="p-img"
+      />
+    </div>
+    <!-- <v-img
       height="300"
       :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
-    ></v-img>
+    ></v-img> -->
     <v-card-title>
       {{ movie.name }}&nbsp;
       <span class="grey--text subtitle">
@@ -67,3 +74,19 @@ export default {
   },
 };
 </script>
+
+<style>
+.p {
+  height: 300px;
+  overflow: hidden;
+}
+
+.p-img {
+  width: 100%;
+  transition: all 10s ease;
+}
+
+.p:hover .p-img {
+  transform: translateY(-100%);
+}
+</style>

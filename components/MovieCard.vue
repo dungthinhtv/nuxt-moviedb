@@ -75,23 +75,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.p {
-  /* width: 30%; */
-  height: 300px;
-  margin: 20px 10px;
-  border: 2px solid rgb(243, 242, 242);
-  border-radius: 10px 10px 0px 0px;
-  overflow: hidden;
-}
-
-.p-img {
-  width: 100%;
-  transition: all 10s ease;
-}
-
-.p:hover .p-img {
-  transform: translateY(-100%);
-}
-</style>
