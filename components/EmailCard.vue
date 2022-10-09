@@ -18,10 +18,10 @@ export default {
     sendEmail() {
       emailjs
         .sendForm(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
+          'service_c2edgo4',
+          'template_5k2dvib',
           this.$refs.form,
-          'YOUR_PUBLIC_KEY'
+          'BET_7-tzu8R4Fzrxk'
         )
         .then(
           (result) => {
