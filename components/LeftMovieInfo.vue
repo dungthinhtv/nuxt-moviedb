@@ -51,13 +51,34 @@
       <!-- WATCH NOW BUTTON  -->
       <v-btn
         href="https://flix.dungthinh.com"
-        color="yellow"
+        color="red"
         block
         depressed
         target="_blank"
         class="mt-2 black--text"
-        v-if="data.homepage"
         ><v-icon>mdi-arrow-right-drop-circle-outline</v-icon>Watch Now</v-btn
+      >
+
+      <!-- MOBILE BUTTON  -->
+      <v-btn
+        href="https://flix.dungthinh.com"
+        color="green"
+        block
+        depressed
+        target="_blank"
+        class="mt-2 black--text"
+        ><v-icon>mdi-tablet-cellphone</v-icon>Mobile App</v-btn
+      >
+
+      <!-- TV BUTTON  -->
+      <v-btn
+        href="https://flix.dungthinh.com"
+        color="blue"
+        block
+        depressed
+        target="_blank"
+        class="mt-2 black--text"
+        ><v-icon>mdi-youtube-tv</v-icon>TV App</v-btn
       >
 
       <!-- WATCH  -->
