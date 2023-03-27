@@ -48,6 +48,18 @@
         ><v-icon>mdi-home</v-icon>Homepage</v-btn
       >
 
+      <!-- WATCH NOW BUTTON  -->
+      <v-btn
+        href="https://flix.dungthinh.com"
+        color="yellow"
+        block
+        depressed
+        target="_blank"
+        class="mt-2 black--text"
+        v-if="data.homepage"
+        ><v-icon>mdi-arrow-right-drop-circle-outline</v-icon>Watch Now</v-btn
+      >
+
       <!-- WATCH  -->
       <v-dialog v-model="dialogPlay" persistent max-width="800" v-if="hasVideo">
         <template v-slot:activator="{ on, attrs }">
