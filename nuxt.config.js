@@ -9,15 +9,15 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - moviedb',
-    title: 'moviedb',
+    titleTemplate: '%s - Dungthinh',
+    title: 'Dungthinh - Watch movies and Series online free in Full HD on many devices',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Full Movies Online Streaming and Tv Shows Streaming At no cost - Fast and Free with Great support on many devices - Chromecast supported - Safe Private streaming' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -36,10 +36,18 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
 
+  googleAnalytics: {
+    id: 'UA-12301-2'
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
+  ],
 
   axios: {
     // proxy: true
