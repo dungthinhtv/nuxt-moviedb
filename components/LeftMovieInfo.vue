@@ -14,7 +14,7 @@
             v-on="on"
             @click="openYoutubeModal"
           >
-            <v-icon>mdi-arrow-right-drop-circle-outline</v-icon>Trailer</v-btn
+            <v-icon>mdi-youtube</v-icon>Trailer</v-btn
           ></template
         ><v-card>
           <v-list class="pa-0">
@@ -56,7 +56,7 @@
         depressed
         target="_blank"
         class="mt-2 black--text"
-        ><v-icon>mdi-arrow-right-drop-circle-outline</v-icon>Watch Now</v-btn
+        ><v-icon>mdi-play-circle</v-icon>Watch Now</v-btn
       >
 
       <!-- MOBILE BUTTON  -->
@@ -78,7 +78,7 @@
         depressed
         target="_blank"
         class="mt-2 black--text"
-        ><v-icon>mdi-youtube-tv</v-icon>TV App</v-btn
+        ><v-icon>mdi-television-play</v-icon>TV App</v-btn
       >
 
       <!-- WATCH  -->
