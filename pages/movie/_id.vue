@@ -119,7 +119,7 @@ export default {
         {   
           hid: 'description',
           name: 'description',
-          content: this.data.description
+          content: this.data.overview
         },
         {   
           hid: 'keywords',
