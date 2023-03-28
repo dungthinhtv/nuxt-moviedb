@@ -116,10 +116,10 @@ export default {
     return {
       title: this.data.title,
       meta: [
-        {
+        {   
           hid: 'description',
           name: 'description',
-          content: this.data.description
+          content: 'Home page description'
         }
       ]
     }

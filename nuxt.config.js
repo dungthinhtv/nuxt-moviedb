@@ -8,8 +8,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - Dungthinh.com',
-    title:
-      'Watch movies and Series online free in Full HD on many devices',
+    title:'Homepage',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,12 +18,24 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Full Movies Online Streaming and Tv Shows Streaming At no cost - Fast and Free with Great support on many devices - Chromecast supported - Safe Private streaming',
+        content:'description'
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+          { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+          {rel:'dns-prefetch',href:'//www.google-analytics.com'},
+          {rel:'dns-prefetch',href:'//www.gstatic.com'},
+          {rel:'dns-prefetch',href:'//fonts.gstatic.com'},
+          {rel:'dns-prefetch', href:'//cdnjs.cloudflare.com'},
+          {rel:'dns-prefetch', href:'//static.zdassets.com'},
+          {rel:'dns-prefetch', href:'//s7.addthis.com'},
+          {rel:'dns-prefetch', href:'//connect.facebook.net'},
+          {rel:'dns-prefetch', href:'//graph.facebook.com'},
+
+
+
+        ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

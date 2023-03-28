@@ -19,6 +19,23 @@
 <script>
 import MovieCard from '../components/MovieCard.vue';
 export default {
+  data() {
+      return {
+        title: 'Home'
+      }
+    },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Home page description'
+        }
+      ]
+    }
+  },
   async asyncData({ $axios }) {
     try {
       const res = await $axios.$get('/movie/popular?language=vi-VN');
