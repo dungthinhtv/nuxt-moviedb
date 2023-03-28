@@ -52,20 +52,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
 
-  i18n: {
-    locales: ['en', 'es', 'fr'],
-    defaultLocale: 'en',
-  },
   sitemap: {
     hostname: 'https://dungthinh.com',
-    // shortcut notation (basic)
-    i18n: true,
-    // nuxt-i18n notation (advanced)
-    i18n: {
-      locales: ['en', 'es', 'fr'],
-      routesNameSeparator: '___',
-    },
-  },
+    gzip: true,
+    // exclude: ['/exampleurl']
+ },
 
   axios: {
     // proxy: true
