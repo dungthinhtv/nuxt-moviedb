@@ -19,18 +19,11 @@
 <script>
 import MovieCard from '../components/MovieCard.vue';
 export default {
-  head() {
-    return {
-      meta:[
-        { hid: 'description', name:'description', content:"This is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows." }
-      ]
-    }
-  },
   async asyncData({ $axios }) {
     try {
-      const res = await $axios.$get('/movie/popular?language=vi-VN');
+      const res = await $axios.$get('/movie/popular');
 
-      const res2 = await $axios.$get('/movie/upcoming?language=vi-VN');
+      const res2 = await $axios.$get('/movie/upcoming');
 
       // console.log(res.results.slice(0, 6));
       return {

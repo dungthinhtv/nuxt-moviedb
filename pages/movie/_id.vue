@@ -115,11 +115,17 @@ export default {
     return {
       title: this.data.title,
       meta: [
-        {   
-          hid: 'description',
-          name: 'description',
-          content: this.data.overview
-        },
+        { hid: 'description', name: 'description', content: this.data.overview },
+        { hid: 'keywords', name: 'keywords', content: this.data.title + ', Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast' },
+        { hid: 'og:title', name: 'og:title', content:  this.data.title },
+        { hid: 'og:description', name: 'og:description', content: this.data.overview },
+        { hid: 'og:image', name: 'og:image', content: 'https://image.tmdb.org/t/p/w500' + this.data.poster_path },
+        { hid: 'og:type', name: 'og:type', content: 'video.movie' },
+        { hid: 'og:locale', name: 'og:locale', content: 'en_US' },
+        { hid: 'og:url', name: 'og:url', content: 'https://www.dungthinh.com/movie/' + this.data.id },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'HD Movies Store' },
+
+
       ]
     }
   },

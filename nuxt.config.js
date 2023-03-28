@@ -12,7 +12,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'description' },
+      { hid: 'description', name: 'description', content: "This is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows." },
+      { hid: 'keywords', name: 'keywords', content: 'news, movies, films, television, TV, celebrities, hollywood, stars, actors, actresses, directors' },
+      { hid: 'og:title', name: 'og:title', content:  'Ratings, Reviews, and Where to Watch the Best Movies & TV Shows - HD Movies Store'},
+      { hid: 'og:description', name: 'og:description', content: "This is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows."},
+      { hid: 'og:image', name: 'og:image', content: '/thumbnail.jpg' },
+      { hid: 'og:type', name: 'og:type', content: 'video.movie' },
+      { hid: 'og:locale', name: 'og:locale', content: 'en_US' },
+      { hid: 'og:url', name: 'og:url', content: 'https://www.dungthinh.com' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'HD Movies Store' },
+
       // { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
