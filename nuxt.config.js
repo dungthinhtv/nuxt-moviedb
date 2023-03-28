@@ -1,9 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
 require('dotenv').config()
 
-// const token =
-//   'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjgyZDMzZmYzNGEyNjU5MGMyOWFhZWYzZDA5ZjI3YyIsInN1YiI6IjYzMjljZjA4YzUxYWNkMDA3YTg2ZWJmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2sAQNSLqAnmY6tR8jFPhxYf7OK52ddljA2aifkLWdRI';
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
