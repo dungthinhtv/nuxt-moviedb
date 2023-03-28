@@ -105,6 +105,7 @@ export default {
       return {
         data: res,
         recommendations: res2.results.slice(0, 6),
+        title: 'new title (toggled)',
       };
     } catch (e) {
       console.log(e);
@@ -120,6 +121,8 @@ export default {
   },
   components: { LeftMovieInfo, Rating, SocialShare, RightMovieInfo },
 };
+
+
 </script>
 
 <style></style>

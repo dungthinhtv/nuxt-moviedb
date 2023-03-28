@@ -1,7 +1,8 @@
 import colors from 'vuetify/es5/util/colors';
+require('dotenv').config()
 
-const token =
-  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjgyZDMzZmYzNGEyNjU5MGMyOWFhZWYzZDA5ZjI3YyIsInN1YiI6IjYzMjljZjA4YzUxYWNkMDA3YTg2ZWJmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2sAQNSLqAnmY6tR8jFPhxYf7OK52ddljA2aifkLWdRI';
+// const token =
+//   'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjgyZDMzZmYzNGEyNjU5MGMyOWFhZWYzZDA5ZjI3YyIsInN1YiI6IjYzMjljZjA4YzUxYWNkMDA3YTg2ZWJmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2sAQNSLqAnmY6tR8jFPhxYf7OK52ddljA2aifkLWdRI';
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -9,9 +10,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - KhoPhim',
+    titleTemplate: '%s - Dungthinh.com',
     title:
-      'KhoPhim - Watch movies and Series online free in Full HD on many devices',
+      'Watch movies and Series online free in Full HD on many devices',
     htmlAttrs: {
       lang: 'en',
     },
@@ -50,7 +51,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap','@nuxtjs/dotenv'],
 
   sitemap: {
     hostname: 'https://dungthinh.com',
@@ -63,7 +64,7 @@ export default {
     baseURL: 'https://api.themoviedb.org/3/',
     headers: {
       common: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${process.env.tokenTMDB}`,
       },
     },
   },
