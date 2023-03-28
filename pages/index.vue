@@ -21,7 +21,7 @@ import MovieCard from '../components/MovieCard.vue';
 export default {
   data() {
       return {
-        title: 'Home'
+        title: 'Homepage'
       }
     },
   head() {
@@ -31,7 +31,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Home page description'
+          content: 'Full Movies Online Streaming and Tv Shows Streaming At no cost - Fast and Free with Great support on many devices - Chromecast supported - Safe Private streaming"'
+        },
+        {   
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'dungthinh tmdb, imdb, watch online movies, movies streaming free, free movies, free full hd movies, watch series online free, series online hd'
         }
       ]
     }
