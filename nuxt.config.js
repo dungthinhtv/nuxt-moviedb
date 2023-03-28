@@ -3,29 +3,17 @@ require('dotenv').config()
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  // ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - HD Movies Store',
-    title:'Homepage',
-    htmlAttrs: {
-      lang: 'en',
-    },
+    title: 'Ratings, Reviews, and Where to Watch the Best Movies & TV Shows',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:'description'
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content:'keywords'
-      },
-      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'description', name: 'description', content: 'description' },
+      // { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
           { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -53,12 +41,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics',
   ],
-
-  googleAnalytics: {
-    id: 'UA-12301-2',
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', '@nuxtjs/sitemap','@nuxtjs/dotenv'],

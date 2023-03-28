@@ -19,25 +19,10 @@
 <script>
 import MovieCard from '../components/MovieCard.vue';
 export default {
-  data() {
-      return {
-        title: 'Homepage'
-      }
-    },
   head() {
     return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Full Movies Online Streaming and Tv Shows Streaming At no cost - Fast and Free with Great support on many devices - Chromecast supported - Safe Private streaming"'
-        },
-        {   
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'dungthinh tmdb, imdb, watch online movies, movies streaming free, free movies, free full hd movies, watch series online free, series online hd'
-        }
+      meta:[
+        { hid: 'description', name:'description', content:"This is the world's most popular and authoritative source for movie, TV and celebrity content. Find ratings and reviews for the newest movie and TV shows." }
       ]
     }
   },

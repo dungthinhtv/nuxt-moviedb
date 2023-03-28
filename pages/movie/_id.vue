@@ -106,7 +106,6 @@ export default {
       return {
         data: res,
         recommendations: res2.results.slice(0, 6),
-        title: 'Movie',
       };
     } catch (e) {
       console.log(e);
@@ -121,19 +120,9 @@ export default {
           name: 'description',
           content: this.data.overview
         },
-        {   
-          hid: 'keywords',
-          name: 'keywords',
-          content: this.data.title
-        }
       ]
     }
   },
-  // data () {
-  //   return {
-  //     titleHead: "dynamic-title"
-  //   }
-  // },
 
   methods: {
     getCastAvatar(item) {
