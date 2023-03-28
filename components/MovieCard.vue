@@ -1,5 +1,5 @@
 <template>
-  <v-card :to="`/movie/${movie.id}`" nuxt>
+  <v-card :to="`/movie/${movie.id}-${slugTitle}`" nuxt>
     <div class="p">
       <img
         :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
@@ -59,6 +59,8 @@
 </template>
 
 <script>
+import { title } from 'process';
+
 export default {
   props: {
     movie: {
@@ -66,12 +68,41 @@ export default {
       require: true,
     },
   },
+  computed: {
+    slugTitle: function() {
+      var slug = this.sanitizeTitle(this.movie.title)
+      return slug;
+    }
+  },
   methods: {
     genreTypeName(genId) {
       for (const item of this.$store.state.genres) {
         if (item.id == genId) return item.name;
       }
     },
+    sanitizeTitle: function(title) {
+      var slug = "";
+      // Change to lower case
+      var titleLower = title.toLowerCase();
+      // Letter "e"
+      slug = titleLower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e');
+      // Letter "a"
+      slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a');
+      // Letter "o"
+      slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o');
+      // Letter "u"
+      slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u');
+      // Letter "d"
+      slug = slug.replace(/đ/gi, 'd');
+      // Trim the last whitespace
+      slug = slug.replace(/\s*$/g, '');
+      // Change whitespace to "-"
+      slug = slug.replace(/\s+/g, '-');
+      // Change whitespace to "-"
+      slug = slug.replace(':', '');
+      
+      return slug;
+    }
   },
 };
 </script>

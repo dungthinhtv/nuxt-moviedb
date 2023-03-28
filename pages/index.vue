@@ -3,7 +3,7 @@
     <SectionTitle title="Popular Movies" link="/movies" />
     <v-row v-if="movies">
       <v-col cols="12" sm="4" v-for="movie in movies" :key="movie.id">
-        <MovieCard :movie="movie" />
+        <MovieCard :movie="movie"/>
       </v-col>
     </v-row>
     <v-spacer class="mt-10"></v-spacer>

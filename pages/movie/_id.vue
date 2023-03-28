@@ -122,11 +122,18 @@ export default {
         { hid: 'og:image', name: 'og:image', content: 'https://image.tmdb.org/t/p/w500' + this.data.poster_path },
         { hid: 'og:type', name: 'og:type', content: 'video.movie' },
         { hid: 'og:locale', name: 'og:locale', content: 'en_US' },
-        { hid: 'og:url', name: 'og:url', content: 'https://www.dungthinh.com/movie/' + this.data.id },
+        { hid: 'og:url', name: 'og:url', content: 'https://www.dungthinh.com/movie/' + this.data.id + '-' + this.slugTitle},
         { hid: 'og:site_name', name: 'og:site_name', content: 'HD Movies Store' },
 
 
       ]
+    }
+  },
+
+  computed: {
+    slugTitle: function() {
+      var slug = this.sanitizeTitle(this.data.title)
+      return slug;
     }
   },
 
@@ -137,6 +144,29 @@ export default {
       }
       return 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';
     },
+    sanitizeTitle: function(title) {
+      var slug = "";
+      // Change to lower case
+      var titleLower = title.toLowerCase();
+      // Letter "e"
+      slug = titleLower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e');
+      // Letter "a"
+      slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a');
+      // Letter "o"
+      slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o');
+      // Letter "u"
+      slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u');
+      // Letter "d"
+      slug = slug.replace(/đ/gi, 'd');
+      // Trim the last whitespace
+      slug = slug.replace(/\s*$/g, '');
+      // Change whitespace to "-"
+      slug = slug.replace(/\s+/g, '-');
+      // Change whitespace to "-"
+      slug = slug.replace(':', '');
+      
+      return slug;
+    }
   },
   components: { LeftMovieInfo, Rating, SocialShare, RightMovieInfo },
 };
