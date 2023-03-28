@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Dungthinh.com',
+    titleTemplate: '%s - HD Movies Store',
     title:'Homepage',
     htmlAttrs: {
       lang: 'en',

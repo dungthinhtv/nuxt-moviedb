@@ -119,7 +119,12 @@ export default {
         {   
           hid: 'description',
           name: 'description',
-          content: 'Home page description'
+          content: this.data.description
+        },
+        {   
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.data.title
         }
       ]
     }
