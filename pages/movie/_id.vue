@@ -96,6 +96,7 @@ import Rating from '../../components/Rating.vue';
 import SocialShare from '../../components/SocialShare.vue';
 import RightMovieInfo from '../../components/RightMovieInfo.vue';
 export default {
+
   async asyncData({ params, $axios }) {
     try {
       const res = await $axios.$get(
@@ -105,12 +106,30 @@ export default {
       return {
         data: res,
         recommendations: res2.results.slice(0, 6),
-        title: 'new title (toggled)',
+        title: 'Movie',
       };
     } catch (e) {
       console.log(e);
     }
   },
+  head(){
+    return {
+      title: this.data.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.data.description
+        }
+      ]
+    }
+  },
+  // data () {
+  //   return {
+  //     titleHead: "dynamic-title"
+  //   }
+  // },
+
   methods: {
     getCastAvatar(item) {
       if (item.profile_path) {
