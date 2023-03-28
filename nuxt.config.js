@@ -32,9 +32,6 @@ export default {
           {rel:'dns-prefetch', href:'//s7.addthis.com'},
           {rel:'dns-prefetch', href:'//connect.facebook.net'},
           {rel:'dns-prefetch', href:'//graph.facebook.com'},
-
-
-
         ],
   },
 
