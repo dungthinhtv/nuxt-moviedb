@@ -20,6 +20,11 @@ export default {
         name: 'description',
         content:'description'
       },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:'keywords'
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
