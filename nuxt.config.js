@@ -3,9 +3,19 @@ import colors from 'vuetify/es5/util/colors';
 const token =
   'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjgyZDMzZmYzNGEyNjU5MGMyOWFhZWYzZDA5ZjI3YyIsInN1YiI6IjYzMjljZjA4YzUxYWNkMDA3YTg2ZWJmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2sAQNSLqAnmY6tR8jFPhxYf7OK52ddljA2aifkLWdRI';
 
+const main_base_URL = 'https://dungthinh.com';
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+
+  //sitemap
+  sitemap: {
+    hostname: main_base_URL,
+  },
+  env: {
+    main_base_URL,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
