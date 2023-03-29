@@ -11,6 +11,7 @@
     <SectionTitle title="Upcoming Movies" link="/movies" />
     <v-row v-if="upcoming">
       <v-col cols="12" sm="4" v-for="movie in upcoming" :key="movie.id">
+        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie" />
       </v-col>
     </v-row>
