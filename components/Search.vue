@@ -33,7 +33,7 @@
             />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>{{ item.title }} <span style="color:green">({{ item.release_date.slice(0,4) }})</span></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
