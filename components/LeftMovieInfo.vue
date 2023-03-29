@@ -216,6 +216,9 @@ export default {
       slug = slug.replace(/\s+/g, '-');
       // Change whitespace to "-"
       slug = slug.replace(':', '');
+      // Change whitespace to "-"
+      slug = slug.replace('.', '');
+
       
       return slug;
     }
