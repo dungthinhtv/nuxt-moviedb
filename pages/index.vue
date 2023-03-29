@@ -3,7 +3,7 @@
     <SectionTitle title="Popular Movies" link="/movies" />
     <v-row v-if="movies">
       <v-col cols="12" sm="4" v-for="movie in movies" :key="movie.id">
-        <a href="#" class="title" style="text-decoration: none;">{{ movie.title }}</a>
+        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie"/>
       </v-col>
     </v-row>
@@ -22,9 +22,9 @@ import MovieCard from '../components/MovieCard.vue';
 export default {
   async asyncData({ $axios }) {
     try {
-      const res = await $axios.$get('/movie/popular?language=en');
+      const res = await $axios.$get('/movie/popular?language=vi');
 
-      const res2 = await $axios.$get('/movie/upcoming?language=en');
+      const res2 = await $axios.$get('/movie/upcoming?language=vi');
 
       // console.log(res.results.slice(0, 6));
       return {

@@ -50,7 +50,19 @@
 
       <!-- WATCH NOW BUTTON  -->
       <v-btn
-        :href="`https://flix.dungthinh.com/movie/${data.id}/${sanitizeTitle(data.title)}`"
+        v-if="data.original_title"
+        :href="`https://flix.dungthinh.com/movie/${data.id}/${sanitizeTitle(data.original_title)}`"
+        color="red"
+        block
+        depressed
+        target="_blank"
+        class="mt-2 black--text"
+        ><v-icon>mdi-play-circle</v-icon>Watch Now</v-btn
+      >
+
+      <v-btn
+        v-if="data.original_name"
+        :href="`https://flix.dungthinh.com/tv/${data.id}/${sanitizeTitle(data.original_name)}`"
         color="red"
         block
         depressed
@@ -138,10 +150,6 @@ export default {
       }
       return;
     },
-    slugTitle: function() {
-      var slug = this.sanitizeTitle("hello")
-      return slug;
-    }
   },
   data() {
     return {
