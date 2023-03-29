@@ -51,7 +51,7 @@
       <!-- WATCH NOW BUTTON  -->
       <v-btn
         v-if="data.original_title"
-        :href="`https://flix.dungthinh.com/movie/${data.id}/${sanitizeTitle(data.original_title)}`"
+        :href="`https://flix.dungthinh.com/movie/${data.id}/${sanitizeTitle(data.original_title)}.html`"
         color="red"
         block
         depressed
@@ -62,7 +62,7 @@
 
       <v-btn
         v-if="data.original_name"
-        :href="`https://flix.dungthinh.com/tv/${data.id}/${sanitizeTitle(data.original_name)}`"
+        :href="`https://flix.dungthinh.com/tv/${data.id}/${sanitizeTitle(data.original_name)}.html`"
         color="red"
         block
         depressed
