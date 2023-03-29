@@ -62,7 +62,7 @@
 
       <v-btn
         v-if="data.original_name"
-        :href="`https://flix.dungthinh.com/tv/${data.id}/${sanitizeTitle(data.original_name)}.html`"
+        :href="`https://flix.dungthinh.com/serie/${data.id}/${sanitizeTitle(data.original_name)}.html`"
         color="red"
         block
         depressed
@@ -215,9 +215,7 @@ export default {
       // Change whitespace to "-"
       slug = slug.replace(/\s+/g, '-');
       // Change whitespace to "-"
-      slug = slug.replace(':', '');
-      // Change whitespace to "-"
-      slug = slug.replace('.', '');
+      slug = slug.replace(/:|\.|!/gm, '');
 
       
       return slug;

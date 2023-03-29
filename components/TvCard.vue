@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     slugTitle: function() {
-      var slug = this.sanitizeTitle(this.movie.title)
+      var slug = this.sanitizeTitle(this.movie.original_name)
       return slug;
     }
   },
@@ -96,9 +96,7 @@ export default {
       // Change whitespace to "-"
       slug = slug.replace(/\s+/g, '-');
       // Change whitespace to "-"
-      slug = slug.replace(':', '');
-      // Change whitespace to "-"
-      slug = slug.replace('.', '');
+      slug = slug.replace(/:|\.|!/gm, '');
       
       return slug;
     }
