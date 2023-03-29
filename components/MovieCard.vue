@@ -14,7 +14,8 @@
     ></v-img> -->
     <v-card-title>
       {{ movie.title }}&nbsp;
-      <span class="grey--text subtitle">
+      <span class="grey--text subtitle" v-if="movie.release_date">
+
         ({{
           movie.release_date
             ? movie.release_date.slice(0, 4)
