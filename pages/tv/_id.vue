@@ -75,7 +75,7 @@
         <h4 class="pink--text font-weight-bold title mt-4">Recommendations</h4>
         <v-row class="mt-2 mb-4">
           <v-col
-            cols="12"
+            cols="4"
             sm="2"
             v-for="recommend in recommendations"
             :key="recommend.id"

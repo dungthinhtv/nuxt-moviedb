@@ -35,3 +35,14 @@ export default {
   },
 };
 </script>
+<style>
+  .original_title{
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: medium;
+      color: green !important;
+      text-align: center;
+    }
+  </style>

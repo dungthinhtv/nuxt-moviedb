@@ -2,8 +2,8 @@
   <v-container>
     <SectionTitle title="Popular Movies" link="/movies" />
     <v-row v-if="movies">
-      <v-col cols="12" sm="4" v-for="movie in movies" :key="movie.id">
-        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
+      <v-col cols="12" sm="4" md="3" xs="6" v-for="movie in movies" :key="movie.id">
+        <a href="#" class="original_title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie"/>
       </v-col>
     </v-row>
@@ -11,7 +11,7 @@
     <SectionTitle title="Upcoming Movies" link="/movies" />
     <v-row v-if="upcoming">
       <v-col cols="12" sm="4" v-for="movie in upcoming" :key="movie.id">
-        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
+        <a href="#" class="original_title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie" />
       </v-col>
     </v-row>
@@ -39,3 +39,7 @@ export default {
   components: { MovieCard },
 };
 </script>
+
+<style>
+  
+</style>

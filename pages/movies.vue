@@ -21,7 +21,7 @@
     </v-row>
     <v-row v-else>
       <v-col cols="12" sm="3" v-for="movie in movies" :key="movie.id">
-        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
+        <a href="#" class="original_title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie" /> </v-col
     ></v-row>
     <v-row>
