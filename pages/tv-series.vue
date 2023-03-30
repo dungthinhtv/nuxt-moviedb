@@ -19,7 +19,13 @@
     <v-row v-else-if="$fetchState.error">
       <h2 class="error">An error occurred!</h2>
     </v-row>
-    <SectionTVs v-else :movies="movies" />
+    <v-row v-else>
+      <v-col cols="12" sm="3" v-for="movie in movies" :key="movie.id">
+        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_name }}</a>
+        <TvCard :movie="movie" />
+        <!-- {{ movie.id }} -->
+      </v-col>
+    </v-row>
     <v-row>
       <v-col cols="12">
         <div class="text-center">
@@ -36,7 +42,8 @@
 </template>
 
 <script>
-import SectionTVs from '../components/SectionTVs.vue';
+import TvCard from '../components/TvCard.vue';
+
 export default {
   data() {
     return {
@@ -52,7 +59,7 @@ export default {
   },
   async fetch() {
     await this.$axios
-      .$get(`/tv/${this.getBy}?page=${this.currentPage}`)
+      .$get(`/tv/${this.getBy}?page=${this.currentPage}&language=vi`)
       .then((res) => {
         this.movies = res.results;
         this.totalPages = 500;
@@ -70,7 +77,7 @@ export default {
       this.$fetch();
     },
   },
-  components: { SectionTVs },
+  components: { TvCard },
 };
 </script>
 

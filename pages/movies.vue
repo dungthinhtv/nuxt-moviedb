@@ -21,7 +21,7 @@
     </v-row>
     <v-row v-else>
       <v-col cols="12" sm="3" v-for="movie in movies" :key="movie.id">
-        <a href="#" class="title" style="text-decoration: none;">{{ movie.title }}</a>
+        <a href="#" class="title" style="text-decoration: none;">{{ movie.original_title }}</a>
         <MovieCard :movie="movie" /> </v-col
     ></v-row>
     <v-row>
@@ -56,7 +56,7 @@ export default {
   },
   async fetch() {
     await this.$axios
-      .$get(`/movie/${this.getBy}?page=${this.currentPage}`)
+      .$get(`/movie/${this.getBy}?page=${this.currentPage}&language=vi`)
       .then((res) => {
         this.movies = res.results;
         this.totalPages = 500;
