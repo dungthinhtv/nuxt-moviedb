@@ -21,7 +21,7 @@
     </v-row>
     <v-row v-else>
       <v-col cols="12" sm="3" v-for="movie in movies" :key="movie.id">
-        <v-card :href="`https://flix.dungthinh.com/serie/${movie.id}/${sanitizeTitle(movie.original_name)}.html`" nuxt>
+        <v-card :href="`https://flix.dungthinh.com/serie/${movie.id}/${sanitizeTitle(movie.original_name)}.html`" target="_blank" nuxt>
           <p class="original_title">{{ movie.original_name }}
           </p>
         </v-card>
