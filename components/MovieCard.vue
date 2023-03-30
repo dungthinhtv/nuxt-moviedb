@@ -1,17 +1,9 @@
 <template>
   <v-card :to="`/movie/${movie.id}-${slugTitle}`" nuxt>
-    <div class="v-img">
-      <img
-        :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
-        alt=""
-        class="p-img"
-      />
-    </div>
-    <!-- <v-img
-      height="300"
+    <v-img
       :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
       class="p-img"
-    ></v-img> -->
+    ></v-img>
     <v-card-title>
       {{ movie.title }}&nbsp;
       <span class="grey--text subtitle" v-if="movie.release_date">
@@ -50,7 +42,9 @@
             small
             color="pink"
             class="white--text mr-1 mb-sm-2"
+            href="https://letesend.com/"
           >
+          
             {{ genreTypeName(genre) }}</v-chip
           >
         </v-col>

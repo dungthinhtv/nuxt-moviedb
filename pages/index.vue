@@ -3,7 +3,10 @@
     <SectionTitle title="Popular Movies" link="/movies" />
     <v-row v-if="movies">
       <v-col cols="12" sm="4" md="3" xs="6" v-for="movie in movies" :key="movie.id">
-        <a href="#" class="original_title" style="text-decoration: none;">{{ movie.original_title }}</a>
+        <v-card :href="`https://flix.dungthinh.com/movie/${movie.id}/text.html`" nuxt>
+          <p class="original_title">{{ movie.original_title }}
+          </p>
+        </v-card>
         <MovieCard :movie="movie"/>
       </v-col>
     </v-row>
@@ -11,7 +14,10 @@
     <SectionTitle title="Upcoming Movies" link="/movies" />
     <v-row v-if="upcoming">
       <v-col cols="12" sm="4" v-for="movie in upcoming" :key="movie.id">
-        <a href="#" class="original_title" style="text-decoration: none;">{{ movie.original_title }}</a>
+        <v-card :href="`https://flix.dungthinh.com/movie/${movie.id}/text.html`" nuxt>
+          <p class="original_title">{{ movie.original_title }}
+          </p>
+        </v-card>
         <MovieCard :movie="movie" />
       </v-col>
     </v-row>
