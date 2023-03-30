@@ -1,6 +1,6 @@
 <template>
   <v-card :to="`/movie/${movie.id}-${slugTitle}`" nuxt>
-    <div class="p">
+    <div class="v-img">
       <img
         :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
         alt=""
