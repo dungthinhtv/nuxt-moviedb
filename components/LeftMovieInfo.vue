@@ -51,7 +51,7 @@
       <!-- WATCH NOW BUTTON  -->
       <v-btn
         v-if="data.original_title"
-        :href="`https://flix.dungthinh.com/movie/${data.id}/${sanitizeTitle(data.original_title)}.html`"
+        :href="`https://somot.one/movie/${data.id}/${sanitizeTitle(data.original_title)}.html`"
         color="red"
         block
         depressed
@@ -62,7 +62,7 @@
 
       <v-btn
         v-if="data.original_name"
-        :href="`https://flix.dungthinh.com/serie/${data.id}/${sanitizeTitle(data.original_name)}.html`"
+        :href="`https://somot.one/serie/${data.id}/${sanitizeTitle(data.original_name)}.html`"
         color="red"
         block
         depressed
@@ -73,7 +73,7 @@
 
       <!-- MOBILE BUTTON  -->
       <v-btn
-        href="https://flix.dungthinh.com"
+        href="https://somot.one"
         color="green"
         block
         depressed
@@ -84,7 +84,7 @@
 
       <!-- TV BUTTON  -->
       <v-btn
-        href="https://flix.dungthinh.com"
+        href="https://somot.one"
         color="blue"
         block
         depressed

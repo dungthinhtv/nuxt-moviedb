@@ -3,7 +3,7 @@
     <SectionTitle title="Popular Movies" link="/movies" />
     <v-row v-if="movies">
       <v-col cols="12" sm="4" md="3" xs="6" v-for="movie in movies" :key="movie.id">
-        <v-card :href="`https://flix.dungthinh.com/movie/${movie.id}/${sanitizeTitle(movie.original_title)}.html`" target="_blank" nuxt>
+        <v-card :href="`https://somot.one/movie/${movie.id}/${sanitizeTitle(movie.original_title)}.html`" target="_blank" nuxt>
           <p class="original_title">{{ movie.original_title }}
           </p>
         </v-card>
@@ -14,7 +14,7 @@
     <SectionTitle title="Upcoming Movies" link="/movies" />
     <v-row v-if="upcoming">
       <v-col cols="12" sm="4" v-for="movie in upcoming" :key="movie.id">
-        <v-card :href="`https://flix.dungthinh.com/movie/${movie.id}/${sanitizeTitle(movie.original_title)}.html`" target="_blank" nuxt>
+        <v-card :href="`https://somot.one/movie/${movie.id}/${sanitizeTitle(movie.original_title)}.html`" target="_blank" nuxt>
           <p class="original_title">{{ movie.original_title }}
           </p>
         </v-card>
