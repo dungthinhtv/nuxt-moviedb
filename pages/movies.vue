@@ -1,13 +1,16 @@
 <template>
   <v-container>
     <div class="text-center my-4">
-      <v-btn value="popular" class="mr-2" @click="handleGetBy(`popular`)"
+      <v-btn value="now_playing" class="ma-2" @click="handleGetBy(`now_playing`)"
+        >Now Playing</v-btn
+      >
+      <v-btn value="popular" class="ma-2" @click="handleGetBy(`popular`)"
         >Popular</v-btn
       >
-      <v-btn value="upcoming" class="mr-2" @click="handleGetBy(`upcoming`)"
+      <v-btn value="upcoming" class="ma-2" @click="handleGetBy(`upcoming`)"
         >Upcoming</v-btn
       >
-      <v-btn value="top_rated" class="mr-2" @click="handleGetBy(`top_rated`)"
+      <v-btn value="top_rated" class="ma-2" @click="handleGetBy(`top_rated`)"
         >Top Rated</v-btn
       >
     </div>
@@ -48,7 +51,7 @@ export default {
   data() {
     return {
       movies: [],
-      getBy: 'popular',
+      getBy: 'now_playing',
       totalResults: 1,
       totalPages: 1,
       currentPage:

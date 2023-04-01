@@ -1,23 +1,17 @@
 <template>
   <v-card :to="`/tv/${movie.id}-${slugTitle}`" nuxt>
-    <div class="p">
-      <img
+      <v-img
         :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
         alt=""
         class="p-img"
       />
-    </div>
-    <!-- <v-img
-      height="300"
-      :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
-    ></v-img> -->
     <v-card-title>
       {{ movie.name }}&nbsp;
       <span class="grey--text subtitle">
         ({{
           movie.release_date
-            ? movie.release_date.slice(0, 4)
-            : movie.first_air_date.slice(0, 4)
+            ? movie.release_date
+            : movie.first_air_date
         }})</span
       >
     </v-card-title>

@@ -53,6 +53,7 @@ export default {
   data: () => ({
     drawer: false,
     items: [
+      { title: 'Home', link: '/' },
       { title: 'Movies', link: '/movies' },
       { title: 'TV Series', link: '/tv-series' },
       { title: 'Actors', link: '/persons' },

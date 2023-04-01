@@ -1,13 +1,16 @@
 <template>
   <v-container>
     <div class="text-center my-4">
-      <v-btn value="popular" class="mr-2" @click="handleGetBy(`popular`)"
-        >Popular</v-btn
+      <v-btn value="on_the_air" class="ma-2" @click="handleGetBy(`on_the_air`)"
+        >On The Air</v-btn
       >
-      <v-btn value="on_the_air" class="mr-2" @click="handleGetBy(`on_the_air`)"
-        >On TV</v-btn
+      <v-btn value="airing_today" class="ma-2" @click="handleGetBy(`airing_today`)"
+        >Airing Today</v-btn
       >
-      <v-btn value="top_rated" class="mr-2" @click="handleGetBy(`top_rated`)"
+      <v-btn value="popular" class="ma-2" @click="handleGetBy(`popular`)"
+        >Popular </v-btn
+      >
+      <v-btn value="top_rated" class="ma-2" @click="handleGetBy(`top_rated`)"
         >Top Rated</v-btn
       >
     </div>
@@ -51,7 +54,7 @@ export default {
   data() {
     return {
       movies: [],
-      getBy: 'popular',
+      getBy: 'on_the_air',
       totalResults: 1,
       totalPages: 1,
       currentPage:
