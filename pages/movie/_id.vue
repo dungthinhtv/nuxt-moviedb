@@ -6,7 +6,7 @@
         <div class="d-md-flex align-center">
           <h2 class="display-2 font-weight-bold">{{ data.title }}</h2>
           <span class="display-1 ml-2 grey--text font-weight-light">{{
-            data.release_date.slice(0, 4)
+            data.release_date
           }}</span>
           <v-spacer></v-spacer>
           <Rating :data="data" />
@@ -103,6 +103,7 @@ export default {
         `/movie/${params.id}?append_to_response=credits,videos,images&language=vi`
       );
       const res2 = await $axios.$get(`/movie/${params.id}/recommendations?language=vi`);
+
       return {
         data: res,
         recommendations: res2.results.slice(0, 6),

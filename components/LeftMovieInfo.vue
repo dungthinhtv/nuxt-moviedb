@@ -24,7 +24,7 @@
                   <iframe
                     allowfullscreen
                     :src="mediaUrl"
-                    v-if="isVideo"
+                    v-if="isTrailer"
                   ></iframe>
                 </div>
                 <v-btn @click="closeModal">
@@ -73,7 +73,7 @@
 
       <!-- MOBILE BUTTON  -->
       <v-btn
-        href="https://somot.one"
+        href="https://somot.one/"
         color="green"
         block
         depressed
@@ -84,7 +84,7 @@
 
       <!-- TV BUTTON  -->
       <v-btn
-        href="https://somot.one"
+        href="https://somot.one/"
         color="blue"
         block
         depressed
@@ -92,109 +92,53 @@
         class="mt-2 black--text"
         ><v-icon>mdi-television-play</v-icon>TV App</v-btn
       >
-
-      <!-- WATCH  -->
-      <v-dialog v-model="dialogPlay" persistent max-width="800" v-if="hasVideo">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color="red"
-            block
-            depressed
-            class="white--text mt-2"
-            v-bind="attrs"
-            v-on="on"
-            @click="openVideoModal"
-          >
-            <v-icon>mdi-arrow-right-drop-circle-outline</v-icon> Watch</v-btn
-          ></template
-        >
-        <v-card>
-          <v-list class="pa-0">
-            <v-list-item class="pa-0">
-              <v-list-item-content class="pa-0">
-                <div class="iframe-container">
-                  <iframe
-                    allowfullscreen
-                    :src="hasVideo"
-                    v-if="isPlay"
-                  ></iframe>
-                </div>
-                <v-btn @click="closeModal">
-                  <v-icon dark>mdi-close</v-icon>
-                </v-btn>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-dialog>
     </v-card-text></v-banner
   >
 </template>
 
 <script>
-import streamData from '../stream.json';
 export default {
   props: {
     data: {
       type: Object,
     },
   },
-  computed: {
-    hasVideo() {
-      const film = this.arrVideos.find((e) => {
-        return e.id === this.data.id;
-      });
-      // console.log(film);
-      if (film) {
-        return 'https://sblanh.com/e/' + film.link + '.html';
-      }
-      return;
-    },
-  },
+  
   data() {
     return {
       dialog: false,
       mediaUrl: '',
-      isVideo: false,
-
-      arrVideos: streamData,
-      dialogPlay: false,
-      videoUrl: '',
-      isPlay: false,
+      isTrailer: false,
     };
   },
   methods: {
     getTrailer() {
-      if (!this.data.videos) return;
-      const video = this.data.videos.results.find((e) => {
-        return e.type === 'Trailer';
-      });
-      // console.log(video);
-      return 'https://youtube.com/embed/' + video.key;
-    },
-    getVideo() {
-      const film = this.arrVideos.find((e) => {
-        return e.id === this.data.id;
-      });
-      // console.log(film);
-      if (film) {
-        return 'https://sblanh.com/e/' + film.link + '.html';
+      if (!this.data.videos){
+        return 'https://youtube.com/embed/IAdCsNtEuBU';
       }
-      return;
+      else{
+        const video = this.data.videos.results.find((e) => {
+          return e.type === 'Trailer';
+        });
+
+        if (video){
+          console.log(video);
+        return 'https://youtube.com/embed/' + video.key;
+
+
+        }else{
+          return 'https://youtube.com/embed/IAdCsNtEuBU';
+
+        }
+      }
     },
     closeModal() {
       this.dialog = false;
-      this.isVideo = false;
-      this.dialogPlay = false;
-      this.isPlay = false;
+      this.isTrailer = false;
     },
     openYoutubeModal() {
       this.mediaUrl = this.getTrailer();
-      this.isVideo = true;
-    },
-
-    openVideoModal() {
-      this.isPlay = true;
+      this.isTrailer = true;
     },
     sanitizeTitle: function(title) {
       var slug = "";
