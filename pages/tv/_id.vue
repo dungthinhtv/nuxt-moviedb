@@ -101,7 +101,7 @@ export default {
       const res = await $axios.$get(
         `/tv/${params.id}?append_to_response=credits,videos,images`
       );
-      const res2 = await $axios.$get(`/tv/${params.id}/recommendations?language=vi`);
+      const res2 = await $axios.$get(`/tv/${params.id}/recommendations`);
       return {
         data: res,
         recommendations: res2.results.slice(0, 6),

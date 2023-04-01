@@ -102,7 +102,7 @@ export default {
       const res = await $axios.$get(
         `/movie/${params.id}?append_to_response=credits,videos,images`
       );
-      const res2 = await $axios.$get(`/movie/${params.id}/recommendations?language=vi`);
+      const res2 = await $axios.$get(`/movie/${params.id}/recommendations`);
 
       return {
         data: res,
