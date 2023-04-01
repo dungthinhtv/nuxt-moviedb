@@ -100,7 +100,7 @@ export default {
   async asyncData({ params, $axios }) {
     try {
       const res = await $axios.$get(
-        `/movie/${params.id}?append_to_response=credits,videos,images&language=vi`
+        `/movie/${params.id}?append_to_response=credits,videos,images`
       );
       const res2 = await $axios.$get(`/movie/${params.id}/recommendations?language=vi`);
 

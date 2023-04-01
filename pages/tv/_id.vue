@@ -99,7 +99,7 @@ export default {
   async asyncData({ params, $axios }) {
     try {
       const res = await $axios.$get(
-        `/tv/${params.id}?append_to_response=credits,videos,images&language=vi`
+        `/tv/${params.id}?append_to_response=credits,videos,images`
       );
       const res2 = await $axios.$get(`/tv/${params.id}/recommendations?language=vi`);
       return {
