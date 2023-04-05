@@ -23,6 +23,7 @@ export default {
       { hid: 'og:locale', name: 'og:locale', content: 'en_US' },
       { hid: 'og:url', name: 'og:url', content: 'https://www.dungthinh.com' },
       { hid: 'og:site_name', name: 'og:site_name', content: 'HD Movies Store' },
+      { hid: 'msvalidate.01', name: 'msvalidate.01', content: 'CA92CD880D2B1B7A402E719F30A0FB71'},
 
       // { name: 'format-detection', content: 'telephone=no' },
     ],
